@@ -1,11 +1,12 @@
 import networkx as nx
-import matplotlib as plt
+import matplotlib.pyplot as plt
 from collections import deque
 
 def bfs(graph,start):
     visited = set()
     queue = deque([start])
     while queue:
+        vertex = queue.popleft()
         if vertex not in visited:
             visited.add(vertex)
             print(vertex)
